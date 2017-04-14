@@ -10,7 +10,7 @@ local Sub		= string.sub;
 local Rand		= math.random;
 local Concat	= table.concat;
 local Instance	= Instance.new;
-local Random	= function(Pref, Len) local Return = {Pref, '~>'}; for Idx = 1, Len do Return[Idx + 1] = Rand(33, 126); end; return Concat(Return); end;
+local Random	= function(Pref, Len) local Return = {Pref or '', '~>'}; for Idx = 1, Len do Return[Idx + 1] = Rand(33, 126); end; return Concat(Return); end;
 
 math.randomseed(tick()); -- This is just common sense.
 
